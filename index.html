@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Parcelados</title>
+    <link rel="stylesheet" href="estilo.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    
+</head>
+<header>
+    <!-- BootStrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+        <img src="logo.png" width="500" height="200">
+
+</header>  
+<body>
+       <section class="mt-4 mb-4 ">
+        <div id=topo  >
+            <hr><h4>Calculadora de Parcelados</h4><hr>
+                <div class="form-row justify-content-center">
+                    <div class="form-group text-center">
+                    <!-- <center> -->
+                    <center>
+                        <label for="price" class="form-label" >Valor Total</label>    
+                        <input type ="number" name="price" id="price" class="form-control">
+                    </center>
+                      <div class="form-row">
+                           <div class="col">
+                            <label for="dinheiro" class="form-label">Dinheiro</label>
+                            <input type="number" name="dinheiro" id="dinheiro" class="form-control">
+                           </div>
+                           <div class="col">
+                            <label for="debito" class="form-label">Débito</label>
+                            <input type="number" name="debito"  id="debito" class="form-control">
+                           </div>
+                       </div>                     
+                    <!-- </center> -->
+                    <br>
+                        <button type="button" class="btn btn-info" onclick="calcular()" id="resposta" class="form-control">Aperte para calcular! </button>
+                    </div>
+                </div>   
+        </div>
+
+        <div id=parcelados>
+            <br>
+            
+            <table class="table table-hover table-sm">
+                <thead>
+                  <tr>
+                    <th scope="col">Parcelado</th>
+                    <th scope="col">Valor Parcela</th>
+                    <th scope="col">Valor Final</th>
+                    </tr>
+                </thead>
+                <tbody>
+    
+                  <tr>
+                    <th scope="deb">1x Débito</th>
+                    <td id=parDeb></td>
+                    <td id="finDeb"></td>
+                    </tr>
+    
+                  <tr>
+                    <th scope="1x">1x Crédito</th>
+                    <td id=par1x></td>
+                    <td id=fin1x></td>
+                    </tr>
+                    
+                  <tr>
+                    <th scope="2x">2x Crédito</th>
+                    <td id=par2x></td>
+                    <td id=fin2x></td>
+                    </tr>
+                    
+                  <tr>
+                    <th scope="3x">3x Crédito</th>
+                    <td id=par3x></td>
+                    <td id=fin3x></td>
+                    </tr>
+    
+                  <tr>
+                    <th scope="4x">4x Crédito</th>
+                    <td id=par4x></td>
+                    <td id=fin4x></td>
+                    </tr> 
+    
+                  <tr>
+                    <th scope="5x">5x Crédito</th>
+                    <td id=par5x></td>
+                    <td id=fin5x></td>
+                    </tr>
+    
+                  <tr>
+                    <th scope="6x">6x Crédito</th>
+                    <td id=par6x></td>
+                    <td id=fin6x></td>
+                    </tr>
+    
+                  <tr>
+                    <th scope="7x">7x Crédito</th>
+                    <td id=par7x></td>
+                    <td id=fin7x></td>
+                    </tr>
+    
+                  <tr>
+                    <th scope="8x">8x Crédito</th>
+                    <td id=par8x></td>
+                    <td id=fin8x></td>
+                    </tr>
+    
+                  <tr>
+                    <th scope="9x">9x Crédito</th>
+                    <td id=par9x></td>
+                    <td id=fin9x></td>
+                    </tr>
+    
+                  <tr>
+                    <th scope="10x">10x Crédito</th>
+                    <td id=par10x></td>
+                    <td id=fin10x></td>
+                    </tr>
+                
+                  <tr>
+                    <th scope="11x">11x Crédito</th>
+                    <td id=par11x></td>
+                     <td id=fin11x></td>
+                     </tr>
+
+                  <tr>
+                    <th scope="12x">12x Crédito</th>
+                    <td id=par12x></td>
+                    <td id=fin12x></td>
+                    </tr>                     
+                </tbody>
+              </table>
+            
+    
+        </div>
+
+
+
+    </section>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
